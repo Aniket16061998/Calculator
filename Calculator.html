@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.mdiv
+		{
+			width: 100%;
+			height:  100vh;
+			background-color: black;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+/*			background-image: url(https://egqusrjtrmt.exactdn.com/wp-content/uploads/2023/10/workdays-between-dates-illustration.webp?strip=all&lossy=1&ssl=1);*/
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+		/*.calc
+		{
+			width: 400px;
+			height:600px;
+			background-color: lightgray;
+			position: center;
+			border-radius: 30px;
+			background-color: lightgray;
+
+			
+		}*/
+	    .calc {
+            width: 400px;
+            height: 600px;
+            background-color: lightgray;
+            position: absolute; /* Fix position attribute */
+            border-radius: 30px;
+            background-color: lightgray;
+        }
+		.button
+		{
+			height: 80px;
+			width: 80px;
+			border-radius: 40px;
+			margin-top: 10px;
+			background-color: white;
+			color: black;
+			font-size: 25px;
+
+
+		}
+		.button2
+		{
+			height: 80px;
+			width: 80px;
+			border-radius: 40px;
+			margin-top: 10px;
+			background-color: orange;
+			color: black;
+			font-size: 25px;
+
+
+		}
+		.button1
+		{
+			height: 80px;
+			width: 160px;
+			border-radius: 40px;
+			background-color: orange;
+			background-color: white;
+			color: black;
+			font-size: 25px;
+
+		}
+		.op
+		{
+			height: 130px;
+			width: 395px;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			font-size: 50px;
+			border: none;
+			background-color: white;
+
+
+
+		}
+		.b{
+		     width: 100%;
+		     display:flex;
+		     align-items: center;
+		     justify-content: center;
+		     justify-content: space-around;
+			display: flex;
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="mdiv">
+		<div class="calc">
+			<form>
+				<div>
+					<input type="text" name="op" class = "op">
+				</div>
+				<div class="b">
+					<input type="button" name="AC" value="AC" onclick="op.value=''" class="button">
+					<input type="button" name="C" value="C" onclick="op.value=(Math.floor(op.value)/10)" class="button">
+					<input type="button" name="mod" value="%" onclick="op.value+=%" class="button">
+					<input type="button" name="operator" value="/" onclick="op.value+='/'" class="button2">
+
+
+				</div>
+				<div class="b">
+					<input type="button" name="number" value="7" onclick="op.value+='7'" class="button">
+					<input type="button" name="number" value="8" onclick="op.value+='8'" class="button">
+					<input type="button" name="number" value="9" onclick="op.value+='9'" class="button">
+					<input type="button" name="operator" value="X" onclick="op.value+='*'" class="button2">
+
+
+				</div>
+				<div class="b">
+					<input type="button" name="number" value="4" onclick="op.value+='4'" class="button">
+					<input type="button" name="number" value="5" onclick="op.value+='5'" class="button">
+					<input type="button" name="number" value="6" onclick="op.value+='6'" class="button">
+					<input type="button" name="operator" value="-" onclick="op.value+='-'" class="button2">
+
+
+				</div>
+				<div class="b">
+					<input type="button" name="number" value="1" onclick="op.value+='1'" class="button">
+					<input type="button" name="number" value="2" onclick="op.value+='2'" class="button">
+					<input type="button" name="number" value="3" onclick="op.value+='3'" class="button">
+					<input type="button" name="operator" value="+" onclick="op.value+='+'" class="button2">
+
+
+				</div>
+				<div class="b">
+					<input type="button" name="number" value="0" onclick="op.value+='0'" class="button1">
+					<input type="button" name="." value="." onclick="op.value+='.'" class="button">
+					<input type="button" name="=" value="=" onclick="op.value=eval(op.value)" class="button2">
+
+
+				</div>
+			</form>
+			
+		</div>
+	</div>
+
+</body>
+</html>
